@@ -14,7 +14,7 @@ export default function MainProvider({ children }: { children: React.ReactNode }
         };
         fetchData();
     }, []);
-    console.log(cats);
+    
 
 
   return (
