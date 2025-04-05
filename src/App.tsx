@@ -1,21 +1,22 @@
-import { useEffect } from 'react'
 import './index.css'
 import Home from './pages/Home'
-import supabase from './utils/supabase'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import Layout from './layout/Layout';
+
 
 export default function App() {
 
-  useEffect(()=>{
-      const fetchData = async () =>{
-        const resp = await supabase.from("categories").select("*")
-        console.log(resp);
-      }
-      fetchData()
-  },[])
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Home />} />
+      </Route>
+    )
+  );
 
   return (
     <>
-      <Home></Home>
+      <RouterProvider router={router} />
     </>
   )
 }
