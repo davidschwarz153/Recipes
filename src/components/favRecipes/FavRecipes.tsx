@@ -16,7 +16,7 @@ export default function FavRecipes() {
           return cat.recipes.map((r: Recipe) => {
             return (
             <Link to={`/recipe/${r.id}`} className="flex justify-center">
-              <article key={r.id} className="bg-gray-700 w-md h-70 rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300 transform cursor-pointer">
+              <article key={r.id} className="bg-gray-700 w-[25vw] overflow-hidden h-70 rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300 transform cursor-pointer">
                 <img
                   className="h-1/2 w-full object-cover rounded-t-3xl"
                   src={r.img}

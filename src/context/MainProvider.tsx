@@ -15,10 +15,13 @@ export default function MainProvider({ children }: { children: React.ReactNode }
         fetchData();
     }, []);
     
-
+    const refreshData = async () => {
+      const resp = await supabase.from("categories").select("*,recipes(*,ingredients(*))");
+      setCats(resp.data ?? []);
+    };
 
   return (
-    <mainContext.Provider value={{cats}}>
+    <mainContext.Provider value={{cats, setCats, refreshData}}>
         {children}
     </mainContext.Provider>
   )

@@ -15,6 +15,7 @@ export default function Header() {
             <Link to="/" className="cursor-pointer">Home</Link>
             <Link to="/recipe" className="cursor-pointer">Rezepte</Link>
             <Link to="" className="cursor-pointer">Über uns</Link>
+            <Link to="/eigenes-rezept" className="cursor-pointer">Eigenes Rezept</Link>
           </section>
           <section>
             <Link to="" className="cursor-pointer">Login</Link>

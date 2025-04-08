@@ -4,6 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Layout from './layout/Layout';
 import RecipePage from './pages/RecipePage';
 import Recipes from './pages/Recipes';
+import EigenesRezept from './pages/EigenesRezept';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="recipe/:id" element={<RecipePage />} />
         <Route path="/recipe" element={<Recipes/>}/>
+        <Route path="/eigenes-rezept" element={<EigenesRezept/>}/>
       </Route>
     )
   );
